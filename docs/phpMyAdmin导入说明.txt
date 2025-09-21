@@ -1,0 +1,52 @@
+
+=== phpMyAdmin 导入说明 ===
+
+1. 登录phpMyAdmin
+2. 选择目标数据库
+3. 点击"导入"选项卡
+4. 选择文件: A股金融日线数据/完整A股金融日线数据_修复编码.csv
+5. 设置以下参数:
+   - 格式: CSV
+   - 字段分隔符: ,
+   - 字段包围符: "
+   - 字段转义符: \
+   - 行终止符: 自动
+   - 字符集: utf8
+   - 列名: 第一行包含列名
+6. 点击"执行"
+
+=== 表结构建议 ===
+建议先创建表结构，再导入数据：
+
+CREATE TABLE IF NOT EXISTS `stock_daily_data` (
+    `id` INT AUTO_INCREMENT PRIMARY KEY,
+    `stock_code` VARCHAR(20) NOT NULL,
+    `stock_name` VARCHAR(100),
+    `ipo_date` DATE,
+    `listing_status` VARCHAR(10),
+    `stock_type` VARCHAR(10),
+    `trade_date` DATE,
+    `open_price` DECIMAL(10,4),
+    `high_price` DECIMAL(10,4),
+    `low_price` DECIMAL(10,4),
+    `close_price` DECIMAL(10,4),
+    `pre_close_price` DECIMAL(10,4),
+    `volume` BIGINT,
+    `amount` BIGINT,
+    `pct_change` DECIMAL(10,4),
+    `turnover_rate` DECIMAL(10,4),
+    `trade_status` VARCHAR(10),
+    `pe_ttm` DECIMAL(10,4),
+    `pb_ratio` DECIMAL(10,4),
+    `ps_ttm` DECIMAL(10,4),
+    `pcf_ttm` DECIMAL(10,4),
+    `is_st` VARCHAR(10),
+    `net_profit` BIGINT,
+    `revenue` BIGINT,
+    `total_assets` BIGINT,
+    `net_assets` BIGINT,
+    `eps` DECIMAL(10,4),
+    `roe` DECIMAL(10,4),
+    `industry_code` VARCHAR(20),
+    `industry_name` VARCHAR(100)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

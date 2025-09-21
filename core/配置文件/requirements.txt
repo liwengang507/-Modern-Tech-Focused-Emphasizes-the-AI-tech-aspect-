@@ -1,0 +1,13 @@
+# A股数据获取项目依赖包 (基于BaoStock)
+baostock>=0.8.8
+pandas>=1.5.0
+numpy>=1.21.0
+openpyxl>=3.0.10
+xlrd>=2.0.1
+xlsxwriter>=3.0.3
+
+# 数据库连接和Web界面依赖
+mysql-connector-python>=8.0.33
+Flask>=2.3.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
