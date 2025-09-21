@@ -30,7 +30,7 @@
 
 <div align="center">
 
-![智能对话界面](visualization/image_show/chat_interface.png)
+![智能对话界面](visualization/image_show/chart_1758447597344.png)
 
 *自然语言交互，智能理解用户查询意图*
 
@@ -40,19 +40,39 @@
 
 <div align="center">
 
-![股票对比分析](visualization/image_show/stock_comparison.png)
+![股票对比分析](visualization/image_show/chart_1758444959486.png)
 
 *支持多股票对比分析，直观展示数据关系*
 
 </div>
 
-#### 🎯 预测分析结果
+#### 🎯 ARIMA预测分析
 
 <div align="center">
 
-![ARIMA预测结果](visualization/image_show/arima_prediction.png)
+![ARIMA预测结果](visualization/image_show/arima_forecast_1758447641351.png)
 
 *基于ARIMA模型的股价预测，提供投资参考*
+
+</div>
+
+#### 🔍 布林带异常检测
+
+<div align="center">
+
+![布林带检测结果](visualization/image_show/boll_detection_1758447694018.png)
+
+*布林带技术指标分析，识别超买超卖点*
+
+</div>
+
+#### 📊 Prophet周期性分析
+
+<div align="center">
+
+![Prophet分析结果](visualization/image_show/prophet_analysis_1758447718085.png)
+
+*Prophet模型分析股票周期性和趋势规律*
 
 </div>
 
@@ -97,6 +117,49 @@
 - **🔄 实时更新**: 支持增量数据更新和实时分析
 - **⚡ 异步处理**: 多任务并发处理，提升系统性能
 - **🛡️ 错误恢复**: 完善的异常处理和自动恢复机制
+
+### 🔧 核心技术展示
+
+#### 🧠 AI大模型技术栈
+
+<div align="center">
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                    🤖 大模型层                                │
+│  Qwen-Agent + DashScope + 自然语言理解                      │
+├─────────────────────────────────────────────────────────────┤
+│                    📊 数据分析层                             │
+│  ARIMA + Prophet + 布林带 + 技术指标计算                     │
+├─────────────────────────────────────────────────────────────┤
+│                    💾 数据处理层                             │
+│  SQLAlchemy + Pandas + Matplotlib + 数据清洗                │
+├─────────────────────────────────────────────────────────────┤
+│                    🌐 服务层                                │
+│  Gradio WebUI + 异步处理 + 实时交互                         │
+└─────────────────────────────────────────────────────────────┘
+```
+
+</div>
+
+#### 📈 机器学习算法集成
+
+| 算法 | 技术实现 | 应用场景 | 效果展示 |
+|------|----------|----------|----------|
+| **ARIMA时间序列** | Statsmodels + 自回归模型 | 股价预测 | ![ARIMA预测](visualization/image_show/arima_forecast_1758447641351.png) |
+| **Prophet周期性** | Facebook Prophet | 趋势分析 | ![Prophet分析](visualization/image_show/prophet_analysis_1758447718085.png) |
+| **布林带技术指标** | 移动平均 + 标准差 | 异常检测 | ![布林带检测](visualization/image_show/boll_detection_1758447694018.png) |
+| **SQL智能查询** | 自然语言转SQL | 数据检索 | ![SQL查询](visualization/image_show/chart_1758444959486.png) |
+
+#### 🌐 系统架构技术
+
+<div align="center">
+
+![系统架构图](visualization/image_show/chart_1758447597344.png)
+
+*基于qwen-agent的智能分析平台架构*
+
+</div>
 
 ---
 
@@ -158,6 +221,140 @@ graph TD
 | **📊 ProphetAnalysisTool** | 周期性分析 | Facebook Prophet |
 | **🌐 NewsSearchTool** | 热点新闻搜索 | Tavily API |
 | **⚡ 图表生成引擎** | 智能图表生成 | Matplotlib + 数据驱动 |
+
+---
+
+## 🎯 核心模块演示
+
+### 📊 1. SQL查询与数据可视化模块
+
+#### 🔍 功能特点
+- **智能SQL生成**: 自然语言自动转换为SQL查询
+- **多维度分析**: 支持价格、涨跌幅、成交量等分析
+- **智能图表**: 根据数据特征自动选择最佳图表类型
+
+#### 📈 演示效果
+
+<div align="center">
+
+![SQL查询演示](visualization/image_show/chart_1758444959486.png)
+
+*多股票对比分析，直观展示数据关系*
+
+</div>
+
+#### 🛠️ 技术实现
+```python
+# 核心技术栈
+- SQLAlchemy: 数据库ORM操作
+- Pandas: 数据处理和分析
+- Matplotlib: 图表生成和可视化
+- 智能图表选择算法
+```
+
+### 📈 2. ARIMA股价预测模块
+
+#### 🔍 功能特点
+- **时间序列分析**: 基于历史数据预测未来走势
+- **多模型支持**: ARIMA(1,1,1)到ARIMA(5,1,5)自适应选择
+- **预测可视化**: 历史数据与预测结果对比展示
+
+#### 📈 演示效果
+
+<div align="center">
+
+![ARIMA预测演示](visualization/image_show/arima_forecast_1758447641351.png)
+
+*基于ARIMA模型的股价预测，提供投资参考*
+
+</div>
+
+#### 🛠️ 技术实现
+```python
+# 核心技术栈
+- Statsmodels: ARIMA模型实现
+- 时间序列平稳性检验
+- 自动参数优化算法
+- 预测置信区间计算
+```
+
+### 🔍 3. 布林带异常检测模块
+
+#### 🔍 功能特点
+- **技术指标计算**: 20日移动平均线 + 2倍标准差
+- **异常点识别**: 自动检测超买超卖信号
+- **可视化分析**: 价格走势与布林带关系展示
+
+#### 📈 演示效果
+
+<div align="center">
+
+![布林带检测演示](visualization/image_show/boll_detection_1758447694018.png)
+
+*布林带技术指标分析，识别超买超卖点*
+
+</div>
+
+#### 🛠️ 技术实现
+```python
+# 核心技术栈
+- 移动平均线计算
+- 标准差统计分析
+- 异常点检测算法
+- 技术指标可视化
+```
+
+### 📊 4. Prophet周期性分析模块
+
+#### 🔍 功能特点
+- **趋势分析**: 识别长期趋势变化
+- **周期性检测**: 周度和年度周期性规律
+- **季节性分解**: 趋势、季节性、噪声分离
+
+#### 📈 演示效果
+
+<div align="center">
+
+![Prophet分析演示](visualization/image_show/prophet_analysis_1758447718085.png)
+
+*Prophet模型分析股票周期性和趋势规律*
+
+</div>
+
+#### 🛠️ 技术实现
+```python
+# 核心技术栈
+- Facebook Prophet: 时间序列预测
+- 季节性分解算法
+- 趋势变化点检测
+- 周期性模式识别
+```
+
+### 🌐 5. 热点新闻搜索模块
+
+#### 🔍 功能特点
+- **实时新闻**: 获取最新财经热点
+- **智能搜索**: 基于Tavily API的新闻检索
+- **内容整合**: 新闻与股票数据关联分析
+
+#### 📈 演示效果
+
+<div align="center">
+
+![新闻搜索演示](visualization/image_show/chart_1758447597344.png)
+
+*实时财经新闻获取，提供市场热点信息*
+
+</div>
+
+#### 🛠️ 技术实现
+```python
+# 核心技术栈
+- Tavily API: 新闻搜索服务
+- 异步网络请求
+- 内容过滤和排序
+- 新闻摘要生成
+```
 
 ---
 
@@ -488,12 +685,44 @@ A股金融年报ChatBI系统/
 
 ### 📊 性能基准
 
-| 场景 | 响应时间 | 优化效果 |
-|------|----------|----------|
-| 🚀 **SQL查询** | 2-5秒 | 快速响应 |
-| ⚡ **图表生成** | 3-8秒 | 智能优化 |
-| 🔄 **预测分析** | 10-20秒 | 深度分析 |
-| 💾 **新闻搜索** | 5-10秒 | 实时获取 |
+| 场景 | 响应时间 | 优化效果 | 演示效果 |
+|------|----------|----------|----------|
+| 🚀 **SQL查询** | 2-5秒 | 快速响应 | ![SQL查询](visualization/image_show/chart_1758444959486.png) |
+| ⚡ **图表生成** | 3-8秒 | 智能优化 | ![图表生成](visualization/image_show/chart_1758447597344.png) |
+| 🔄 **预测分析** | 10-20秒 | 深度分析 | ![ARIMA预测](visualization/image_show/arima_forecast_1758447641351.png) |
+| 💾 **新闻搜索** | 5-10秒 | 实时获取 | ![新闻搜索](visualization/image_show/chart_1758447597344.png) |
+
+### 🎯 系统运行状态展示
+
+#### 🚀 启动界面
+
+<div align="center">
+
+![系统启动](visualization/image_show/chart_1758447597344.png)
+
+*系统启动界面，展示所有功能模块*
+
+</div>
+
+#### 📊 实时分析效果
+
+<div align="center">
+
+![实时分析](visualization/image_show/chart_1758444959486.png)
+
+*多股票实时对比分析，数据更新及时*
+
+</div>
+
+#### 🔍 技术指标分析
+
+<div align="center">
+
+![技术指标](visualization/image_show/boll_detection_1758447694018.png)
+
+*布林带技术指标，专业的技术分析*
+
+</div>
 
 ---
 
@@ -598,11 +827,38 @@ git push origin feature/your-feature
 - **🧪 测试**: 新功能需要单元测试
 - **📚 文档**: 更新相关文档
 
+---
+
+## 🎉 致谢
+
+### 🙏 开源项目
+
+- **🦜 qwen-agent**: 强大的AI助手框架
+- **⚡ Gradio**: 高效的Web界面框架
+- **📊 Matplotlib**: 专业的数据可视化库
+- **🤗 Statsmodels**: 丰富的统计分析工具
+- **🐼 Pandas**: 数据处理的瑞士军刀
+
+### 🌟 特别感谢
+
+感谢所有为开源社区做出贡献的开发者们！
+
+---
+
+## 📄 许可证
+
+本项目采用 [MIT License](LICENSE) 开源协议。
+
+---
+
+<div align="center">
 
 ### 🌟 如果这个项目对你有帮助，请给我们一个Star！ 🌟
 
+联系邮箱：17710020276@163.com
+
+**🚀 A股金融年报ChatBI系统 - 让AI为你的投资赋能！ 🚀**
 
 *Built with ❤️ by the Stock Analysis Team*
 
 </div>
-
