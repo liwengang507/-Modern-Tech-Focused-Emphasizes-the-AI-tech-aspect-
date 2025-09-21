@@ -598,58 +598,11 @@ git push origin feature/your-feature
 - **🧪 测试**: 新功能需要单元测试
 - **📚 文档**: 更新相关文档
 
----
-
-## 🎉 致谢
-
-### 🙏 开源项目
-
-- **🦜 qwen-agent**: 强大的AI助手框架
-- **⚡ Gradio**: 高效的Web界面框架
-- **📊 Matplotlib**: 专业的数据可视化库
-- **🤗 Statsmodels**: 丰富的统计分析工具
-- **🐼 Pandas**: 数据处理的瑞士军刀
-
-### 🌟 特别感谢
-
-感谢所有为开源社区做出贡献的开发者们！
-
----
-
-## 📄 许可证
-
-本项目采用 [MIT License](LICENSE) 开源协议。
-
----
-
-<div align="center">
 
 ### 🌟 如果这个项目对你有帮助，请给我们一个Star！ 🌟
 
-[![GitHub Stars](https://img.shields.io/github/stars/your-username/stock-chatbi?style=social&label=Star)](https://github.com/your-username/stock-chatbi)
-[![GitHub Forks](https://img.shields.io/github/forks/your-username/stock-chatbi?style=social&label=Fork)](https://github.com/your-username/stock-chatbi)
-[![GitHub Watchers](https://img.shields.io/github/watchers/your-username/stock-chatbi?style=social&label=Watch)](https://github.com/your-username/stock-chatbi)
-
-**让A股数据分析变得像聊天一样简单！**
-
-[🏠 首页](https://github.com/your-username/stock-chatbi) • [📖 文档](https://github.com/your-username/stock-chatbi/wiki) • [🐛 问题反馈](https://github.com/your-username/stock-chatbi/issues) • [💬 社区讨论](https://github.com/your-username/stock-chatbi/discussions)
-
-</div>
-
----
-
-## 🔗 相关链接
-
-- **📚 项目文档**: [Wiki](https://github.com/your-username/stock-chatbi/wiki)
-- **💬 社区讨论**: [Discussions](https://github.com/your-username/stock-chatbi/discussions)
-- **📧 联系我们**: [Email](mailto:your-email@example.com)
-
----
-
-<div align="center">
-
-**🚀 A股金融年报ChatBI系统 - 让AI为你的投资赋能！ 🚀**
 
 *Built with ❤️ by the Stock Analysis Team*
 
 </div>
+
